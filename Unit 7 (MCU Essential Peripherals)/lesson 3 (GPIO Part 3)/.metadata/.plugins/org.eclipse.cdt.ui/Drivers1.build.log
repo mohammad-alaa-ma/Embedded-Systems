@@ -1,0 +1,28 @@
+12:42:40 **** Build of configuration Debug for project Drivers1 ****
+make -j4 all 
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/LCD_DRIVER/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/LCD_DRIVER/lcd.d" -MT"Stm32_F103C6_Drivers/LCD_DRIVER/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/LCD_DRIVER/lcd.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.d" -MT"Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc  -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc  -gdwarf-2 -o "Drivers1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Section\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers1.elf
+ 
+arm-none-eabi-size   Drivers1.elf 
+arm-none-eabi-objdump -h -S  Drivers1.elf  > "Drivers1.list"
+arm-none-eabi-objcopy  -O binary  Drivers1.elf  "Drivers1.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3084	     40	   1568	   4692	   1254	Drivers1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers1.list
+ 
+Finished building: Drivers1.bin
+ 
+arm-none-eabi-objcopy -O ihex Drivers1.elf Drivers1.hex
+ 
+
+12:42:46 Build Finished. 0 errors, 0 warnings. (took 5s.882ms)
+

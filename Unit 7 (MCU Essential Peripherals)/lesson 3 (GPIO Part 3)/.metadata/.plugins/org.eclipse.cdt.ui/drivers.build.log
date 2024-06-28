@@ -1,0 +1,10 @@
+05:47:17 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+
+05:47:18 Build Finished. 0 errors, 0 warnings. (took 1s.219ms)
+

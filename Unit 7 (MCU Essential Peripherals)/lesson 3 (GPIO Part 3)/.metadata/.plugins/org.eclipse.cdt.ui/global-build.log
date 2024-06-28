@@ -1,0 +1,381 @@
+17:03:28 **** Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:14:12 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:14:36 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Inc/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/Stm32_F103C6_gpio_driver.d" -MT"Inc/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: drivers.elf
+ 
+arm-none-eabi-size   drivers.elf 
+arm-none-eabi-objdump -h -S  drivers.elf  > "drivers.list"
+arm-none-eabi-objcopy  -O binary  drivers.elf  "drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: drivers.bin
+ 
+Finished building: drivers.list
+ 
+17:15:06 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Inc/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/Stm32_F103C6_gpio_driver.d" -MT"Inc/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: drivers.elf
+ 
+arm-none-eabi-objdump -h -S  drivers.elf  > "drivers.list"
+arm-none-eabi-objcopy  -O binary  drivers.elf  "drivers.bin"
+arm-none-eabi-size   drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	drivers.elf
+Finished building: default.size.stdout
+Finished building: drivers.list
+ 
+Finished building: drivers.bin
+ 
+ 
+17:15:21 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-size   drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	drivers.elf
+Finished building: default.size.stdout
+ 
+17:15:34 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:50: drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:16:21 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:16:38 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:16:52 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Inc/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/Stm32_F103C6_gpio_driver.d" -MT"Inc/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: drivers.elf
+ 
+arm-none-eabi-objdump -h -S  drivers.elf  > "drivers.list"
+arm-none-eabi-objcopy  -O binary  drivers.elf  "drivers.bin"
+arm-none-eabi-size   drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: drivers.bin
+ 
+Finished building: drivers.list
+ 
+17:34:03 **** Incremental Build of configuration Debug for project drivers ****
+make -j4 all 
+arm-none-eabi-size   drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	drivers.elf
+Finished building: default.size.stdout
+ 
+17:39:49 **** Clean-only build of configuration Debug for project Drivers ****
+make -j4 clean 
+rm -rf *
+ 
+17:39:50 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../Inc/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/Stm32_F103C6_gpio_driver.d" -MT"Inc/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.bin
+ 
+Finished building: Drivers.list
+ 
+17:43:28 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+19:26:12 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+19:27:13 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+10:19:19 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/Keypad_driver" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/LCD_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/Keypad_driver" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/LCD_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/Keypad_driver" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/LCD_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../Inc/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/Keypad_driver" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/section lab/Drivers/Stm32_F103C6_Drivers/LCD_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/Stm32_F103C6_gpio_driver.d" -MT"Inc/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\section lab\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+ 
+ 
+Finished building: Drivers.list
+ 
+10:23:26 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: Drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:26:24 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c:20:10: fatal error: Stm32_F103C6_gpio_driver.h: No such file or directory
+ #include "Stm32_F103C6_gpio_driver.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:27:33 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:39: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:47: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:54: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_GPIO_Init'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:76: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:77: undefined reference to `MCAL_GPIO_TogglePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:78: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:81: undefined reference to `MCAL_GPIO_ReadPin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Debug/../Src/main.c:82: undefined reference to `MCAL_GPIO_TogglePin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:49: Drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:27:58 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.d" -MT"Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+10:28:44 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.d" -MT"Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Drivers/Stm32_F103C6_Drivers/inc" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.bin
+Finished building: Drivers.list
+ 
+ 
+10:31:20 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 
+12:42:37 **** Clean-only build of configuration Debug for project Drivers1 ****
+make -j4 clean 
+rm -rf *
+ 
+12:42:40 **** Build of configuration Debug for project Drivers1 ****
+make -j4 all 
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/LCD_DRIVER/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/LCD_DRIVER/lcd.d" -MT"Stm32_F103C6_Drivers/LCD_DRIVER/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/LCD_DRIVER/lcd.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.d" -MT"Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc  -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc  -gdwarf-2 -o "Drivers1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Section\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers1.elf
+ 
+arm-none-eabi-size   Drivers1.elf 
+arm-none-eabi-objdump -h -S  Drivers1.elf  > "Drivers1.list"
+arm-none-eabi-objcopy  -O binary  Drivers1.elf  "Drivers1.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3084	     40	   1568	   4692	   1254	Drivers1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers1.list
+ 
+Finished building: Drivers1.bin
+ 
+arm-none-eabi-objcopy -O ihex Drivers1.elf Drivers1.hex
+ 
+12:56:01 **** Clean-only build of configuration Debug for project Drivers ****
+make -j4 clean 
+rm -rf *
+ 
+12:56:03 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/LCD_DRIVER/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/LCD_DRIVER/lcd.d" -MT"Stm32_F103C6_Drivers/LCD_DRIVER/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/LCD_DRIVER/lcd.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.d" -MT"Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/KEYPAD_DRIVER/keypad.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc  -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc  -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/KEYPAD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/LCD_DRIVER" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 3/Section/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc  -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 3\Section\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+   3084	     40	   1568	   4692	   1254	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+Finished building: Drivers.list
+ 
+ 
+ 
+arm-none-eabi-objcopy -O ihex Drivers.elf Drivers.hex
+ 
+05:47:17 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1464	      8	   1568	   3040	    be0	Drivers.elf
+Finished building: default.size.stdout
+ 

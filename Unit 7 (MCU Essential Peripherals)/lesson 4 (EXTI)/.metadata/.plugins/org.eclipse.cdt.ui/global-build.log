@@ -1,0 +1,264 @@
+06:08:51 **** Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+../HAL/keypad.c: In function 'Keypad_init':
+../HAL/keypad.c:22:21: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function); did you mean 'GPIO_MODE_Input_AF'?
+  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+                     ^~~~~~~~~~~~~~~~~~~
+                     GPIO_MODE_Input_AF
+../HAL/keypad.c:22:21: note: each undeclared identifier is reported only once for each function it appears in
+../HAL/keypad.c:23:29: error: 'GPIO_SPEED_10M' undeclared (first use in this function); did you mean 'GPIO_PIN_10'?
+  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+                             ^~~~~~~~~~~~~~
+                             GPIO_PIN_10
+../HAL/keypad.c: In function 'Keypad_getkey':
+../HAL/keypad.c:70:50: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_Set'?
+   MCAL_GPIO_WritePin(KEYPAD_PORT, Key_padCol[0], GPIO_PIN_SET);
+                                                  ^~~~~~~~~~~~
+                                                  GPIO_PIN_Set
+../HAL/keypad.c:74:50: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_SET'?
+   MCAL_GPIO_WritePin(KEYPAD_PORT, Key_padCol[i], GPIO_PIN_RESET);
+                                                  ^~~~~~~~~~~~~~
+                                                  GPIO_PIN_SET
+make: *** [HAL/subdir.mk:21: HAL/keypad.o] Error 1
+make: *** Waiting for unfinished jobs....
+../HAL/lcd.c: In function 'LCD_GPIO_init':
+../HAL/lcd.c:14:21: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function); did you mean 'GPIO_MODE_Input_AF'?
+  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+                     ^~~~~~~~~~~~~~~~~~~
+                     GPIO_MODE_Input_AF
+../HAL/lcd.c:14:21: note: each undeclared identifier is reported only once for each function it appears in
+../HAL/lcd.c:15:29: error: 'GPIO_SPEED_10M' undeclared (first use in this function); did you mean 'GPIO_PIN_10'?
+  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+                             ^~~~~~~~~~~~~~
+                             GPIO_PIN_10
+../HAL/lcd.c:71:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_Reset'?
+  MCAL_GPIO_WritePin(LCD_CTRL, EN_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_Reset
+../HAL/lcd.c: In function 'LCD_lcd_kick':
+../HAL/lcd.c:82:42: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_Set'?
+  MCAL_GPIO_WritePin(LCD_CTRL, EN_SWITCH, GPIO_PIN_SET);
+                                          ^~~~~~~~~~~~
+                                          GPIO_PIN_Set
+../HAL/lcd.c:84:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_SET'?
+  MCAL_GPIO_WritePin(LCD_CTRL, EN_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_SET
+../HAL/lcd.c: In function 'LCD_check_lcd_isbusy':
+../HAL/lcd.c:119:21: error: 'GPIO_MODE_INPUT_FLO' undeclared (first use in this function); did you mean 'GPIO_MODE_Input_AF'?
+  PinCfg.GPIO_MODE = GPIO_MODE_INPUT_FLO;
+                     ^~~~~~~~~~~~~~~~~~~
+                     GPIO_MODE_Input_AF
+../HAL/lcd.c:150:42: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_Set'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RW_SWITCH, GPIO_PIN_SET);
+                                          ^~~~~~~~~~~~
+                                          GPIO_PIN_Set
+../HAL/lcd.c:151:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_SET'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RS_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_SET
+../HAL/lcd.c: In function 'LCD_WRITE_COMMAND':
+../HAL/lcd.c:168:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_Reset'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RW_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_Reset
+../HAL/lcd.c: In function 'LCD_WRITE_CHAR':
+../HAL/lcd.c:182:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_Reset'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RW_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_Reset
+../HAL/lcd.c:183:42: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_RESET'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RS_SWITCH, GPIO_PIN_SET);
+                                          ^~~~~~~~~~~~
+                                          GPIO_PIN_RESET
+make: *** [HAL/subdir.mk:23: HAL/lcd.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+06:11:58 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+../HAL/keypad.c: In function 'Keypad_init':
+../HAL/keypad.c:22:21: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function); did you mean 'GPIO_MODE_Input_AF'?
+  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+                     ^~~~~~~~~~~~~~~~~~~
+                     GPIO_MODE_Input_AF
+../HAL/keypad.c:22:21: note: each undeclared identifier is reported only once for each function it appears in
+../HAL/keypad.c:23:29: error: 'GPIO_SPEED_10M' undeclared (first use in this function); did you mean 'GPIO_PIN_10'?
+  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+                             ^~~~~~~~~~~~~~
+                             GPIO_PIN_10
+../HAL/lcd.c: In function 'LCD_GPIO_init':
+../HAL/lcd.c:14:21: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function); did you mean 'GPIO_MODE_Input_AF'?
+  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+                     ^~~~~~~~~~~~~~~~~~~
+                     GPIO_MODE_Input_AF
+../HAL/lcd.c:14:21: note: each undeclared identifier is reported only once for each function it appears in
+../HAL/keypad.c: In function 'Keypad_getkey':
+../HAL/keypad.c:70:50: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_Set'?
+   MCAL_GPIO_WritePin(KEYPAD_PORT, Key_padCol[0], GPIO_PIN_SET);
+                                                  ^~~~~~~~~~~~
+                                                  GPIO_PIN_Set
+../HAL/keypad.c:74:50: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_SET'?
+   MCAL_GPIO_WritePin(KEYPAD_PORT, Key_padCol[i], GPIO_PIN_RESET);
+                                                  ^~~~~~~~~~~~~~
+                                                  GPIO_PIN_SET
+../HAL/lcd.c:15:29: error: 'GPIO_SPEED_10M' undeclared (first use in this function); did you mean 'GPIO_PIN_10'?
+  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+                             ^~~~~~~~~~~~~~
+                             GPIO_PIN_10
+../HAL/lcd.c:71:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_Reset'?
+  MCAL_GPIO_WritePin(LCD_CTRL, EN_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_Reset
+../HAL/lcd.c: In function 'LCD_lcd_kick':
+../HAL/lcd.c:82:42: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_Set'?
+  MCAL_GPIO_WritePin(LCD_CTRL, EN_SWITCH, GPIO_PIN_SET);
+                                          ^~~~~~~~~~~~
+                                          GPIO_PIN_Set
+../HAL/lcd.c:84:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_SET'?
+  MCAL_GPIO_WritePin(LCD_CTRL, EN_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_SET
+../HAL/lcd.c: In function 'LCD_check_lcd_isbusy':
+../HAL/lcd.c:119:21: error: 'GPIO_MODE_INPUT_FLO' undeclared (first use in this function); did you mean 'GPIO_MODE_Input_AF'?
+  PinCfg.GPIO_MODE = GPIO_MODE_INPUT_FLO;
+                     ^~~~~~~~~~~~~~~~~~~
+                     GPIO_MODE_Input_AF
+../HAL/lcd.c:150:42: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_Set'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RW_SWITCH, GPIO_PIN_SET);
+                                          ^~~~~~~~~~~~
+                                          GPIO_PIN_Set
+../HAL/lcd.c:151:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_SET'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RS_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_SET
+make: *** [HAL/subdir.mk:21: HAL/keypad.o] Error 1
+make: *** Waiting for unfinished jobs....
+../HAL/lcd.c: In function 'LCD_WRITE_COMMAND':
+../HAL/lcd.c:168:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_Reset'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RW_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_Reset
+../HAL/lcd.c: In function 'LCD_WRITE_CHAR':
+../HAL/lcd.c:182:42: error: 'GPIO_PIN_RESET' undeclared (first use in this function); did you mean 'GPIO_PIN_Reset'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RW_SWITCH, GPIO_PIN_RESET);
+                                          ^~~~~~~~~~~~~~
+                                          GPIO_PIN_Reset
+../HAL/lcd.c:183:42: error: 'GPIO_PIN_SET' undeclared (first use in this function); did you mean 'GPIO_PIN_RESET'?
+  MCAL_GPIO_WritePin(LCD_CTRL, RS_SWITCH, GPIO_PIN_SET);
+                                          ^~~~~~~~~~~~
+                                          GPIO_PIN_RESET
+make: *** [HAL/subdir.mk:23: HAL/lcd.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+06:29:21 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 4\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+ 
+06:36:29 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+06:55:54 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:25:10: fatal error: GPIO_DRIVER_STM32F103C6.h: No such file or directory
+ #include "GPIO_DRIVER_STM32F103C6.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+06:56:36 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 4\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+HAL/lcd.o: In function `LCD_GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:17: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:22: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:27: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:34: undefined reference to `MCAL_GPIO_Init'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:39: undefined reference to `MCAL_GPIO_Init'
+HAL/lcd.o:C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:44: more undefined references to `MCAL_GPIO_Init' follow
+HAL/lcd.o: In function `LCD_GPIO_init':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:72: undefined reference to `MCAL_GPIO_WritePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:73: undefined reference to `MCAL_GPIO_WritePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:74: undefined reference to `MCAL_GPIO_WritePin'
+HAL/lcd.o: In function `LCD_lcd_kick':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:83: undefined reference to `MCAL_GPIO_WritePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:85: undefined reference to `MCAL_GPIO_WritePin'
+HAL/lcd.o: In function `LCD_WRITE_COMMAND':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:164: undefined reference to `MCAL_GPIO_WritePort'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:169: undefined reference to `MCAL_GPIO_WritePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:170: undefined reference to `MCAL_GPIO_WritePin'
+HAL/lcd.o: In function `LCD_WRITE_CHAR':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:181: undefined reference to `MCAL_GPIO_WritePort'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:183: undefined reference to `MCAL_GPIO_WritePin'
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../HAL/lcd.c:184: undefined reference to `MCAL_GPIO_WritePin'
+Src/main.o: In function `main':
+C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Debug/../Src/main.c:60: undefined reference to `MCAL_EXTI_GPIO_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:50: Drivers.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+06:58:40 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.d" -MT"Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Stm32_F103C6_gpio_driver/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/Stm32_F103C6_EXTI_driver/Stm32_F103C6_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/Stm32_F103C6_EXTI_driver/Stm32_F103C6_EXTI_driver.d" -MT"Src/Stm32_F103C6_EXTI_driver/Stm32_F103C6_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Stm32_F103C6_EXTI_driver/Stm32_F103C6_EXTI_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 4\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3672	      8	   1632	   5312	   14c0	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+ 
+07:01:39 **** Incremental Build of configuration Debug for project Drivers ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/HAL/includes" -I"C:/Users/Mohamed-pc/Desktop/Assignments/Unit 7/lesson 4/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mohamed-pc\Desktop\Assignments\Unit 7\lesson 4\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3668	      8	   1632	   5308	   14bc	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+Finished building: Drivers.list
+ 
+ 
+ 
