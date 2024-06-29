@@ -30,7 +30,7 @@ Embedded C extends standard C to include features necessary for embedded systems
   - Linker Scripts
   - Header Files (.h)
   - Makefile for Building Projects
-  - 
+    
 app.c ,uart.c, uart.h are written.
 app.o & uart.o are extracted from app.c & uart.c.
 startup.s is written.
@@ -84,4 +84,4 @@ To get started with the materials in this repository:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/embedded-systems-course.git
+   git clone https://github.com/mohammad-alaa-ma/Embedded-Systems.git
