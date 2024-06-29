@@ -69,7 +69,7 @@ This unit covers writing complete drivers to GPIO and EXTI.
 
  
 ### Unit 8: MCU Interfacing
-This unit covers how to interface microcontrollers with various external devices and systems by writing complete drivers to UART, SPI, I2C
+This unit covers how to interface microcontrollers with various external devices and systems by writing complete drivers to UART, SPI, I2C (Atmega)
 
 - **Topics Covered:**
   - Communication Protocols (UART, SPI, I2C)
